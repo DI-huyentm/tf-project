@@ -7,5 +7,3 @@ variable "target_group_arn" {}
 variable "desired_capacity" {}
 variable "min_size" {}
 variable "max_size" {}
-# modules/asg/outputs.tf
-output "asg_name" { value = aws_autoscaling_group.this.name }
