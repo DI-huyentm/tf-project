@@ -1,3 +1,14 @@
+# block de cau hinh. Cu phap cua terraform se dua vao block
+# co cac block: 
+# terraform: dung de cau hinh cac provider
+# resource: dai dien cho 1 tai nguyen cua 1 provider
+# variables:
+# outputs:
+# module:
+# local: giong nhu variable, cung la input, nhung minh van dung expression duoc, con nhu variables thi chi dung string duoc thoi
+
+# terraform.tfstate: luu trang thai ma terraform no dang quan ly
+
 terraform {
   required_providers {
     aws = {
@@ -7,6 +18,7 @@ terraform {
   }
 }
 
+# phan nay bo trong vi da chay CLI Export....
 provider "aws" {
   # Configuration options
 }
@@ -28,6 +40,8 @@ resource "aws_security_group" "alb_sg" {
   name        = "alb-sg"
   description = "Allow HTTP/HTTPS"
   vpc_id      = module.vpc.vpc_id
+  # nhung doan module. -> lay gia tri tu file outputs
+
   ingress {
     from_port   = 80
     to_port     = 80

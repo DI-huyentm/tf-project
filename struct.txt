@@ -1,0 +1,19 @@
+.
+├── main.tf
+├── modules
+│   ├── alb
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   └── variables.tf
+│   ├── asg
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   └── vpc
+│       ├── main.tf
+│       ├── outputs.tf
+│       └── variables.tf
+├── terraform.tfstate
+├── terraform.tfvars
+└── variables.tf
+
+5 directories, 14 files
